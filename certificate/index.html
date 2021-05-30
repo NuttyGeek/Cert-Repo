@@ -1,98 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-    <style>
-        .certificate {
-            width: 297mm;
-            height: 210mm;
-            margin: 0 auto;
-            background-image: url('./cert-background.svg');
-        }
-        .flex {
-            display: flex;
-        }
-        .justify-content-center {
-            justify-content: center;
-        }
-        .align-items-center {
-            align-items: center;
-        }
-        .align-items-end {
-            align-items: flex-end;
-        }
-        .content {
-            margin: 15px;
-            border: 1px solid black;
-            width: 240mm;
-            height: 150mm;
-            text-align: center;
-        }
-        .red {
-            color: red;
-        }
-        .flex-1 {
-            flex: 1;
-        }
-        .flex-2 {
-            flex: 2;
-        }
-        .justify-content-between {
-            justify-content: space-between;
-        }
-        .flex-column {
-            flex-direction: column;
-        }
-        .small {
-            font-size: 0.8em;
-        }
-    </style>
-</head>
-<body>
-    <div id="certificate" class="certificate flex justify-content-center align-items-center">
-        <div class="content flex flex-column justify-content-between">
-            <div>
-                <h1>Appreciation Letter</h1>
-                <h3>For your selfless and kind service during COVID-19 pandemic </h3>
-                <h1 class="red" contenteditable> Mrs./Mr. Your Name</h1>
-                <p>title goes to you</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <title>Enter Info</title>
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+        <div class="container mt-2">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <img width="200px" height="200px" src="./images/mainlogo.png" alt="">
+                </div>
+                <div class="col-md-6 text-center">
+                    <h1>
+                        Global Anticorruption Foundation
+                    </h1>
+                    <h2>
+                        Republic of India
+                    </h2>
+                    <p>
+                        द्वारा
+                    </p>
+                    <p style="color: red;font-size: xx-large;">
+                        Corona Warriors / कोरोना योद्धा सम्मान <br>
+            
+                    </p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img width="150px" height="200px" src="./images/logoniti.png" alt="">
+                </div>
             </div>
-            <div class="flex justify-content-between align-items-end">
-                <div class="flex-1"><img src="" alt=""></div>
-                <div class="flex-2">
-                    <img src="" alt="">
+            
+        </div>
+        <div class="container text-center mt-5">
+            <p>
+                We Salute to the The Corona warriors for their excelent duty for society during covid-19 corona apedemic and honoured them as Corona worriers <br><br> कोरोना महामारी के दौरान समाज में उत्कृष्ट कर्त्तव्य परायणता के लिए स्वयंसेवकों सरकारी एवं
+                गैर सरकारी अधिकारियों, स्वास्थ्य कर्मियों, व् समाज सेवियों को कोरोना योद्धा उपाधि से सन्मानित करता है
+            </p>
+            <p>for printing of appreation letter kindly fill the following details</p>
+            <p>प्रशस्ती पत्र मुद्रण के लिए कृपया निम्नलिखित जानकारी भरें</p>
+        </div>
+        <div class="container mt-4">
+            <div class="form row">
+                <div class="  col-sm-6">
+                    <label for="title">Title</label>
+                    <select class="form-control" name="" id="title">
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs.</option>
+                    </select>
                 </div>
-                <div class="flex-1"><img src="" alt=""></div>
+                <div class=" mb-2  col-sm-6">
+                    <label for="name">Name</label>
+                    <input class="form-control" id="name" placeholder="Your Name" type="text">
+                </div>
+                <div class="mb-2  col-sm-6">
+                    <label for="mobile">Mobile</label>
+                    <input class="form-control" id="mobile" type="text">
+                </div>
+                <div class="mb-2  col-sm-6">
+                    <label for="state">State</label>
+                    <input class="form-control" type="text" id="state">
+                </div>
+                <div class="mb-2 col-sm-6">
+                    <label for="district">District</label>
+                    <input class="form-control" type="text" id="district">
+                </div>
+                <div class="mb-2  col-sm-6">
+                    <label for="pincode">Pincode</label>
+                    <input class="form-control" type="text" id="pincode">
+                </div>
+                <div class="mb-2  col-sm-6">
+                    <label for="email">Email</label>
+                    <input class="form-control" type="text" id="email">
+                </div>
             </div>
-            <div class="flex justify-content-between align-items-end">
-                <div><img src="" alt=""></div>
-                <div>
-                    <p>Global Anti Corruption Foundation of India immensely appreciates and honour the work done by you, while wishing a happy life ahead for you</p>
-                </div>
-                <div><img src="" alt=""></div>
-            </div>
-            <div class="flex justify-content-between align-items-end">
-                <div class="flex-1 small">
-                    <div>Contact: info@gacf.in Web: www.gacf.in</div>
-                    <div>Niti Aayog Govt of India, Reg UID:HP/2020/0251837</div>
-                    <div>Reg No. HP/B/2020 Under (I.T.A.) Govt of India</div>
-                </div>
-                <div class="flex-1">
-                    <img src="" alt="">
-                    <h5>Chairman GACF (ROI)</h5>
-                </div>
-                <div class="flex-1">
-                    <p>Certiticate No: GACF-<span contenteditable>0000</span></p>
-                </div>
+            <div class="mb-2 mt-2  text-center">
+                <button class="btn btn-primary btn-black btn-lg" onclick="submit()">Submit</button>
             </div>
         </div>
-    </div>
-    <button id="print">Print</button>
-    <script src="./index.js">
-    </script>
-</body>
+    </body>
 </html>

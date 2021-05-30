@@ -1,0 +1,69 @@
+
+
+@font-face {
+    font-family: gacffont;
+    src: url("fonts/BERNHC.TTF");
+}
+
+.certificate {
+    width: 297mm;
+    height: 210mm;
+    margin: 0 auto;
+    background-image: url('./images/cert-background.svg');
+}
+*{
+    -webkit-print-color-adjust: exact;
+    forced-color-adjust: exact;
+}
+
+#print {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+
+@media print {
+    #print {
+        display: none;
+    }
+}
+
+.btn.btn-primary.btn-black {
+    background-color: rgba(0, 0, 0, 0.80);
+    border: rgba(0, 0, 0, 0.80);
+}
+
+.btn.btn-primary.btn-black:hover {
+    background-color: black;
+    border: black;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.content {
+    max-width: 240mm;
+}
+
+.red {
+    color: red;
+}
+
+div.small {
+    font-size: 0.75em;
+}
+
+img.dvs {
+    max-height: 100px;
+}
+
+.gacf {
+    font-family: gacffont;
+    color: navy;
+}
+
